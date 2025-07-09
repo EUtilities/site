@@ -1,10 +1,14 @@
 
 
-#  this is the index.md mkdocs build kept ignoring
 
-NFO    -  Building documentation to directory: /home/smithjenp/EUtilities/site/my-docs/site
-WARNING -  Excluding 'index.html' from the site because it conflicts with 'index.md'.
-# Welcome to MkDocs
+
+# Welcome to EUtilities
+
+## Quick Start
+
+## Reference
+
+## PubMed User Guide
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
