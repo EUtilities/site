@@ -58,11 +58,6 @@ tags:
     externalDocs:
       description: Find out more
       url: https://github.com/jenpetsmit/eutilities/blob/main/eutils/ecitmatch.md
-  - name: epost
-    description: Stores a list of UIDs to use with other operations (get, post, etc)
-    externalDocs:
-      description: Find out more
-      url: https://github.com/jenpetsmit/eutilities/blob/main/eutils/epost.md
 paths:
  /esearch.fcgi: 
     get:
@@ -284,70 +279,70 @@ paths:
           description: Ok
  /elink.fcgi:
    get:     
-    tags: 
-      - elink
-    summary: Retrieves UIDs for related or linked records, or LinkOut URLs.
-    description: Provides a list of the names of all valid Entrez databases or when given a database, provides database statistics including lists of indexing fields and available link names
-    parameters:
-      - name: db
-        in: query
-        description: Target database from which to retrieve UIDs. This is the origin database of the link operation. If db and dbfrom are set to the same database value, then ELink will return computational neighbors within that database.
-        explode: true
-        required: false
-        schema: 
-          type: string
-      - name: dbfrom
-        in: query
-        description: Source database with the input UIDs
-        explode: false
-        required: true
-        schema: 
-          type: string
-      - name: cmd
-        in: query
-        description: ELink command mode
-        explode: false
-        required: true
-        schema: 
-          type: array
-          items:
-            type: string
-            enum:        # enum restricts to specific values  
-              - neighbor
-              - neighbor_score
-               - neighbot_history
-              - acheck
-              - ncheck
-              - lcheck
-              - llinks
-              - llinkslib
-              - prlinks
-      - name: id
-        in: query
-        description: A single UID or a comma-separated UID list from the same database (dbfrom)
-        explode: true
-        required: false
-        schema: 
-          type: string
-        example: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?dbfrom=nuccore&db=nuccore&id=34577062
-      - $ref: '#/components/parameters/query_key'
-      - $ref: '#/components/parameters/WebEnv'
-      - $ref: '#/components/parameters/retmode'
-      - $ref: '#/components/parameters/idtype'   #  add this to components
-      - $ref: '#/components/parameters/linkname' # add this to components
-      - $ref: '#/components/parameters/term'
-      - name: holding
-        in: query
-        description: Only URLs for the LinkOut provider specified by holding will be returned. The value provided to holding should be the abbreviation of the LinkOut provider's name found in the <NameAbbr> tag of the ELink XML output when cmd is set to llinks or llinkslib. The holding parameter only functions when cmd is set to llinks or llinkslib.
-        explode: true
-        required: false
-        schema:
-          type: string
-      - $ref: '#/components/parameters/datetype'
-      - $ref: '#/components/parameters/reldate'
-      - $ref: '#/components/parameters/mindate'
-      - $ref: '#/components/parameters/maxdate'
-    response:
+     tags: 
+       - elink
+     summary: Retrieves UIDs for related or linked records, or LinkOut URLs.
+     description: Provides a list of the names of all valid Entrez databases or when given a database, provides database statistics including lists of indexing fields and available link names
+     parameters:
+       - name: db
+         in: query
+         description: Target database from which to retrieve UIDs. This is the origin database of the link operation. If db and dbfrom are set to the same database value, then ELink will return computational neighbors within that database.
+         explode: true
+         required: false
+         schema: 
+           type: string
+       - name: dbfrom
+         in: query
+         description: Source database with the input UIDs
+         explode: false
+         required: true
+         schema: 
+           type: string
+       - name: cmd
+         in: query
+         description: ELink command mode
+         explode: false
+         required: true
+         schema: 
+           type: array
+         items:
+           type: string
+         enum:        # enum restricts to specific values  
+            - neighbor
+            - neighbor_score
+            - neighbot_history
+            - acheck
+            - ncheck
+            - lcheck
+            - llinks
+            - llinkslib
+            - prlinks
+       - name: id
+         in: query
+         description: A single UID or a comma-separated UID list from the same database (dbfrom)
+         explode: true
+         required: false
+         schema: 
+           type: string
+         example: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?dbfrom=nuccore&db=nuccore&id=34577062
+       - $ref: '#/components/parameters/query_key'
+       - $ref: '#/components/parameters/WebEnv'
+       - $ref: '#/components/parameters/retmode'
+       - $ref: '#/components/parameters/idtype'   #  add this to components
+       - $ref: '#/components/parameters/linkname' # add this to components
+       - $ref: '#/components/parameters/term'
+       - name: holding
+         in: query
+         description: Only URLs for the LinkOut provider specified by holding will be returned. The value provided to holding should be the abbreviation of the LinkOut provider's name found in the <NameAbbr> tag of the ELink XML output when cmd is set to llinks or llinkslib. The holding parameter only functions when cmd is set to llinks or llinkslib.
+         explode: true
+         required: false
+         schema:
+           type: string
+       - $ref: '#/components/parameters/datetype'
+       - $ref: '#/components/parameters/reldate'
+       - $ref: '#/components/parameters/mindate'
+       - $ref: '#/components/parameters/maxdate'
+     responses:
       '200':
            description:  "200 response It works"
            content:  # Response body
@@ -358,36 +353,51 @@ paths:
                     id: 
                       type: string 
  /espell.fcgi:
-   get:   
-    tags: 
-      espell  
+    get:
+      tags:
+        - espell  
     summary: Retrieves UIDs for related or linked records, or LinkOut URLs.
-    description: Provides a list of the names of all valid Entrez databases or when given a database, provides database statistics including lists of indexing fields and available link names
+    description: Provides a list of the names of all valid Entrez databases or when given a database, provides database statistics...
     parameters:
-      - name: db
-        in: query
-        description: Target database to search
-        explode: true
-        required: true
-        schema: 
-          type: string
-      - name: term
-        in: query
-        description: Entrez text query. All special characters must be URL encoded. Spaces may be replaced by '+' signs. 
-        explode: true
-        required: true
-        schema:
-          type: string
-    response:
-        '200':
-          description:  200 response It works
+        - name: db
+          in: query
+          description: Target database to search
+          explode: true
+          required: true
+          schema: 
+              type: string
+        - name: term
+          in: query
+          description: Entrez text query...
+          explode: true
+          required: true
+          schema:
+              type: string
+    responses:
+      '200':
+        description: Successful response with spelling suggestions
+        content:
+           application/xml:
+             schema:
+               type: object
+               properties:
+                  spelling:
+                    type: string
+                    description: Suggested spelling
+        application/json:
+          schema:
+            type: object
+            properties:
+               spelling:
+                  type: string
+                  description: Suggested spelling
  /ecitmatch.fcgi:
    get: 
-    tags:
-      - ecitmatch    
-    summary: Retrieves PubMed IDs (PMIDs) that correspond to a set of input citation strings.
-    description: Retrieves PubMed IDs (PMIDs) that correspond to a set of input citation strings. 
-    parameters:
+     tags:
+       - ecitmatch    
+     summary: Retrieves PubMed IDs (PMIDs) that correspond to a set of input citation strings.
+     description: Retrieves PubMed IDs (PMIDs) that correspond to a set of input citation strings. 
+     parameters:
        - name: db
          in: query
          description: Target database to search. The only supported value is pubmed. Example db=pubmed
