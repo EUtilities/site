@@ -6,18 +6,16 @@ info:
     Some useful links:
     - [save for later](http address here)
     - [save for later](http address here)
-  #termsOfService: [link to terms of service here](http address)
+  #termsOfService: https://example.com/terms
   contact:
     email: jenniferpetroffsmith@gmail.com
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   version: 1.0.11
-security:
-  - api_key: []
 externalDocs:
   description:  A General Introduction to the E-utilities  
-  # url: [A General Introduction to the E-utilities](https://www.ncbi.nlm.nih.gov/books/NBK25497/)
+  url:  https://www.ncbi.nlm.nih.gov/books/NBK25497/
 servers:
   - url: https://eutils.ncbi.nlm.nih.gov/entrez/eutils
     description: base URL
@@ -69,7 +67,7 @@ tags:
       url: https://github.com/jenpetsmit/eutilities/blob/main/eutils/epost.md
 paths:
 
- /esearch.fcgi?: 
+ /esearch.fcgi: 
     get:
       tags: 
         - esearch
@@ -93,9 +91,7 @@ paths:
            type: string
         - $ref: '#/components/parameters/retmode'
         - $ref: '#/components/parameters/rettype'  
-    security:
-      -api_key: []
- responses:
+      responses:
         "200":
           description: ESummary downloaded
           content: 
@@ -156,7 +152,6 @@ paths:
         - $ref: '#/components/parameters/seq_stop'
         - $ref: '#/components/parameters/complexity'
         - $ref: '#/components/parameters/retstart'  
-        - $ref: '#/components/parameters/retmax'
         - $ref: '#/components/parameters/version'
         - $ref: '#/components/parameters/rettype' 
         - name: retmode
@@ -166,13 +161,12 @@ paths:
           schema:  
            type: array
            items:
-            enum:  # enum restricts to specific values  BUT THIS IS FOR db=pubmed MED ONLY
-              - pub_date
-              - Author
-              - JournalName
-              - relevance
-      security:
-        -api_key: []
+              type: string
+              enum:  # enum restricts to specific values  BUT THIS IS FOR db=pubmed MED ONLY
+                - pub_date
+                - Author
+                - JournalName
+                - relevance
       responses:
         "200":
           description: ESummary downloaded, originally designed for PubMed articles, but has been expanded to to other databases where the fields of the document summary vary by database
@@ -185,7 +179,7 @@ paths:
                 type: string
             text/html:
               schema:
-                type:string
+                type: string
             text/*:
               schema:
                 type: string
@@ -223,9 +217,7 @@ paths:
         - $ref: '#/components/parameters/complexity'
         - $ref: '#/components/parameters/retmode'
         - $ref: '#/components/parameters/rettype'  
-      security:
-        -api_key: []
-      responses:
+      response:
         "200":
           description: EFetch records, results vary by databases's fields. 
           content: 
@@ -237,7 +229,7 @@ paths:
                 type: string
             text/html:
               schema:
-                type:string
+                type: string
             text/*:
               schema:
                 type: string
@@ -279,12 +271,12 @@ paths:
           required: false
           schema: 
             type: string
-          examples:  # trying to figure out if I can add a link to the Version parameter - not sure if it works
+          example:  
             link:
               summary: "See detailed information about version parametmer with respect to EInfo"
               externalValue: https://github.com/jenpetsmit/eutilities/blob/main/eutils/einfo.md
       security:
-        -api_key: []
+        - api_key: []
       responses:
         '200':
           description: Ok
@@ -351,9 +343,7 @@ paths:
         - $ref: '#/components/parameters/reldate'
         - $ref: '#/components/parameters/mindate'
         - $ref: '#/components/parameters/maxdate'
-      security:
-        -api_key: []
-      responses:
+      response:
           '200':
             description:  200 response It works
             content:  # Response body
@@ -382,9 +372,7 @@ paths:
           required: true
           schema:
            type: string
-      security:
-        -api_key: []
-      responses:
+      response:
           '200':
             description:  200 response It works
  /ecitmatch.fcgi:
@@ -414,9 +402,7 @@ paths:
           explode: true
           required: true
           schema:
-           type: string
-      security:
-        -api_key: []
+          type: string
       responses:
           '200':
             description:  200 response It works
@@ -505,7 +491,7 @@ components:
         type: array
         items:
           type: string
-          enum:        # enum restricts to specific values  BUT THIS IS FOR PUB MED ONLY
+          enum:     
             - pub_date
             - Author
             - JournalName
@@ -529,30 +515,31 @@ components:
         type: integer
         example: db=nuccore&id=21614549&strand=1&seq_start=1&seq_stop=100&rettype=fasta&retmode=text
     seq_stop:
-      name: strand # 
+      name: seq_stop # 
       in: query
       description: Last sequence base to retrieve. The value should be the integer coordinate of the last desired base, with "1" representing the first base of the sequence.
       schema:
         type: integer
         example: db=nuccore&id=21614549&strand=1&seq_start=1&seq_stop=100&rettype=fasta&retmode=text
     complexity:
-      name: strand   # 
+      name: complexity   
       in: query
-      description: 
+      description: |
+        Complexity of sequence:
+          - 0: entire blob
+          - 1: bioseq
+           - 2: minimal bioseq-set
+           - 3: minimal nuc-prot
+           - 4: minimal pub-set 
       schema:
         type: string
-        #enum:
-          #- 0
-        #    - description: entire blob
-         # - 1
-         #   - description: bioseq
-         # - 2
-         #   - description: minimal bioseq-set
-         # - 3
-        #    - description: minimal nuc-prot
-         # -4
-          #  - description: minimal pub-set
-    version:  # 
+        enum:
+          - 0
+          - 1
+          - 2
+          - 3
+          - 4
+    version:  
       name: version
       in: query
       required: false
@@ -575,7 +562,7 @@ components:
       description: Name of the Entrez link to retrieve. Every link in Entrez is given a name of the form dbfrom_db_subset
       schema:
         type: string
-        example: Find snps with genotype data linked to genes. <br> https://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?dbfrom=gene&db=snp&id=93986&linkname=gene_snp_genegenotype
+        example: Find snps with genotype data linked to genes.  https://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?dbfrom=gene&db=snp&id=93986&linkname=gene_snp_genegenotype
     datetype:
       name: datetype
       in: query
@@ -608,20 +595,7 @@ components:
       description: End of date range  used to limit a link operation by the date specified by datetype. Mindate and maxdate must be used together to specify an arbitrary date range. The general date format is YYYY/MM/DD, and these variants are also allowed- YYYY, YYYY/MM.
       schema: 
         type: string
-    #query_key:
-      #name: Query Key
-      #in: query
-      #required: false
-      #explode: false
-      #type: string
-    #api_key:
-      #name API key  
-      #in: query
-      #reaquired: false
-      #explose: false
-      #type: sting
-      #description: Only needed if access to E-Utilities is more than three requests per second. Users can get an API key from their NCBI account, from the Settings page.
-    responses:
+  responses:
     205:
       description: all good
     IllegalInput:
