@@ -4,15 +4,17 @@ E-Utilities is an Application Program Interface (API) that helps you gather data
 
 Here are a few examples of what E-Utilities can do for you:
 
-•	Search PubMed with a term and retrieve PMIDs (Add link here to ID)
-•	Search MedGen with a SnoMedCI ID, then link over to GTR and retrieve their Summary info
-•	Save a list of Gene IDs and fetch their full records
-•	Save a PubChem Compound CID and retrieve the SDF-formatted record to showthe 3D coordinates in the Molecules App (ADD LINK HERE)
+* Search PubMed with a term and retrieve PMIDs (Add link here to ID)
+* Search MedGen with a SnoMedCI ID, then link over to GTR and retrieve their Summary info
+* Save a list of Gene IDs and fetch their full records
+* Save a PubChem Compound CID and retrieve the SDF-formatted record to showthe 3D coordinates in the Molecules App (ADD LINK HERE)
 
 Users can access E-utilities by writing API queries and pasting them into any internet browser. 
 
 
 ## Quick Start
+
+Go to [Quick Start](eu_quick/eu_quick.md) guide.
 
 ## Reference
 
