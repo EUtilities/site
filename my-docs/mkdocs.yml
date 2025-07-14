@@ -8,9 +8,3 @@ theme:
     - search.highlight
     - content.tabs.link
 
-nav:
-  - Home: 'index.md'
-  - eu_quick:
-    - eu_quick.md
-    - eu_reference.md
-    - ed_pubmed.md
