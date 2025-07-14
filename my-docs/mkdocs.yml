@@ -1,4 +1,4 @@
-site_name: My Docs
+site_name: NCBI E-Utilities
 theme:
   name: material
   palette:
@@ -7,3 +7,10 @@ theme:
     - navigation.instant
     - search.highlight
     - content.tabs.link
+
+nav:
+  - Home: 'index.md'
+  - eu_quick:
+    - eu_quick.md
+    - eu_reference.md
+    - ed_pubmed.md
