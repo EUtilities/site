@@ -330,18 +330,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#httpseutilsncbinlmnihgoventrezeutilsesearchfcgidbpubmedtermasthma" class="md-nav__link">
+  <a href="#esummary" class="md-nav__link">
     <span class="md-ellipsis">
-      https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&amp;term=asthma
+      ESummary
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#esummary" class="md-nav__link">
+  <a href="#efetch" class="md-nav__link">
     <span class="md-ellipsis">
-      ESummary
+      EFetch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elink" class="md-nav__link">
+    <span class="md-ellipsis">
+      ELink
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elink_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ELink
     </span>
   </a>
   
@@ -408,18 +426,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#httpseutilsncbinlmnihgoventrezeutilsesearchfcgidbpubmedtermasthma" class="md-nav__link">
+  <a href="#esummary" class="md-nav__link">
     <span class="md-ellipsis">
-      https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&amp;term=asthma
+      ESummary
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#esummary" class="md-nav__link">
+  <a href="#efetch" class="md-nav__link">
     <span class="md-ellipsis">
-      ESummary
+      EFetch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elink" class="md-nav__link">
+    <span class="md-ellipsis">
+      ELink
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elink_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ELink
     </span>
   </a>
   
@@ -446,11 +482,13 @@
 <ul>
 <li><a href="#esearch">ESearch</a> - Searches one database</li>
 <li><a href="#essumary">ESummary</a> - Downloads summaries of database records</li>
-<li>Efetch  - Returns full data records</li>
-<li>Elink - Returns data linked within the same database or between two databases</li>
-<li>Epost - Saves your search history and using that information in another E-Utility</li>
-<li>EGQuery - Searches all the databases  </li>
-<li>EINFO….</li>
+<li><a href="#efetch">Efetch</a>  - Returns full data records</li>
+<li><a href="#elink">Elink</a> - Returns data linked within the same database or between two databases</li>
+<li><a href="#egquery">EGQuery</a> - Returns the number of records in each database for a search term</li>
+<li><a href="#einfo">EInfo</a> - Returns statistics for a single database or a list of all NCBI databases</li>
+<li><a href="#espell">ESpell</a> - Returns spelling suggestions for terms within a single text query  </li>
+<li><a href="#ecitmatch">ECitMatch</a> - * Returns PubMed IDs (PMIDs) for a set of citation strings </li>
+<li><a href="#epost">EPost</a> - Saves your search history for use in another E-Utility</li>
 </ul>
 <h2 id="base-url">Base URL</h2>
 <p>All E-Utility queries begin with the following URL: 
@@ -464,7 +502,7 @@ https://eutils.ncbi.nlm.nih.gov/entrez/eutils/{  }.fcgi? </p>
 <p>| --- | --- | --- |
 | ESearch Required Parameters  | Description | Example |
 | db | Database you want to search | db=pubmed |
-| term  | Word or phrase  you want to search for in the database | term = astham |</p>
+| term  | Word or phrase  you want to search for in the database | term = asthma |</p>
 <ol>
 <li>Paste the URL with parameters into any internet browser and press <strong>Enter</strong> key</li>
 </ol>
@@ -472,7 +510,8 @@ https://eutils.ncbi.nlm.nih.gov/entrez/eutils/{  }.fcgi? </p>
 <p>Returns a list of UIDs displayed in the internet browser. By default, the maximum number of results is limited to 20. 
 * To change the number of results or add in other optional parameters, see <a href="reference_guide/esearch.md">ESearch</a> for more information.</p>
 <p><strong>Example</strong></p>
-<h2 id="httpseutilsncbinlmnihgoventrezeutilsesearchfcgidbpubmedtermasthma"><a href="https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&amp;term=asthma">https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&amp;term=asthma</a></h2>
+<p><a href="https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&amp;term=asthma">https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&amp;term=asthma</a></p>
+<hr />
 <h2 id="esummary">ESummary</h2>
 <p>To use ESummary:
 1.  Start with the base URL: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi? 
@@ -487,12 +526,170 @@ https://eutils.ncbi.nlm.nih.gov/entrez/eutils/{  }.fcgi? </p>
 <li>Paste the URL with parameters into any internet browser and press <strong>Enter</strong> key</li>
 </ol>
 <p><strong>Result</strong></p>
+<p>Returns document summaries (DocSums) that provide brief overviews of the records associated with the provided UIDs.</p>
+<p><strong>Example</strong></p>
+<p><a href="https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&amp;id=40654110">https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&amp;id=40654110</a></p>
+<hr />
+<h2 id="efetch">EFetch</h2>
+<p>To use EFetch:
+1.  Start with the base URL: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi? 
+2.  Add required parameters to the base URL
+* If more than one parameter, join with an ampersand (&amp;) 
+* Do not include spaces</p>
+<p>| --- | --- | --- |
+| EFetch Required Parameters  | Description | Example |
+| db | Database you want to search | db=pubmed |
+| id  | One UID or a set of UIDs separated with commas that you want a document summary. <br> There is no set maximum for the number of UIDs that can be passed to EFetch, but if more than about 200 UIDs are provided, the request should be made using the HTTP POST method <strong>LINK TO POST METHOD</strong>  | id=40654110|</p>
+<ol>
+<li>Paste the URL with parameters into any internet browser and press <strong>Enter</strong> key</li>
+</ol>
+<p><strong>Result</strong></p>
+<p>Returns formatted data records for the UIDs, in a format specified in the request, e.g., XML or FASTA.</p>
+<p><strong>Example</strong></p>
+<p><a href="https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;id=19393038,30242208,29453458">https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;id=19393038,30242208,29453458 </a></p>
+<hr />
+<h2 id="elink">ELink</h2>
+<p>To use EFetch:
+1.  Start with the base URL: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi? 
+2.  Add required parameters to the base URL
+* If more than one parameter, join with an ampersand (&amp;) 
+* Do not include spaces</p>
+<p>| --- | --- | --- |
+| EFetch Required Parameters  | Description | Example |
+| db | Database you want to search | db=pubmed |
+| id  | One UID or a set of UIDs separated with commas that you want a document summary. <br> There is no set maximum for the number of UIDs that can be passed to EFetch, but if more than about 200 UIDs are provided, the request should be made using the HTTP POST method <strong>LINK TO POST METHOD</strong>  | id=40654110|</p>
+<ol>
+<li>Paste the URL with parameters into any internet browser and press <strong>Enter</strong> key</li>
+</ol>
+<p><strong>Result</strong></p>
 <p>Returns a list of UIDs displayed in the internet browser. By default, the maximum number of results is limited to 20. 
 * To change the number of results or add in other optional parameters, see <a href="reference_guide/esearch.md">ESearch</a> for more information.</p>
 <p><strong>Example</strong></p>
-<p><a href="https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&amp;id=40654110">https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&amp;id=40654110</a>
-•   </p>
+<p><a href="https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;id=19393038,30242208,29453458">https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;id=19393038,30242208,29453458 </a></p>
 <hr />
+<h2 id="elink_1">ELink</h2>
+<p>To use EFetch:
+1.  Start with the base URL: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi? 
+2.  Add required parameters to the base URL
+* If more than one parameter, join with an ampersand (&amp;) 
+* Do not include spaces</p>
+<p>| --- | --- | --- |
+| EGQuery Required Parameters  | Description | Example |
+| term  | Word or phrase you want to search for | term = asthma |</p>
+<ol>
+<li>Paste the URL with parameters into any internet browser and press <strong>Enter</strong> key</li>
+</ol>
+<p><strong>Result</strong></p>
+<p>Returns a list of UIDs displayed in the internet browser. By default, the maximum number of results is limited to 20. 
+* To change the number of results or add in other optional parameters, see <a href="reference_guide/esearch.md">ESearch</a> for more information.</p>
+<p><strong>Example</strong></p>
+<p><a href="https://eutils.ncbi.nlm.nih.gov/entrez/eutils/egquery.fcgi?term=asthma">https://eutils.ncbi.nlm.nih.gov/entrez/eutils/egquery.fcgi?term=asthm</a></p>
+<hr />
+<h1 id="egquery">EGQuery</h1>
+<p>To use EGQuery:
+1.  Start with the base URL: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/egquery.fcgi? 
+2.  Add required parameters to the base URL
+* If more than one parameter, join with an ampersand (&amp;) 
+* Do not include spaces</p>
+<p>| --- | --- | --- |
+| EFetch Required Parameters  | Description | Example |
+| db | Database you want to search | db=pubmed |
+| id  | One UID or a set of UIDs separated with commas that you want a document summary. <br> There is no set maximum for the number of UIDs that can be passed to EFetch, but if more than about 200 UIDs are provided, the request should be made using the HTTP POST method <strong>LINK TO POST METHOD</strong>  | id=40654110|</p>
+<ol>
+<li>Paste the URL with parameters into any internet browser and press <strong>Enter</strong> key</li>
+</ol>
+<p><strong>Result</strong></p>
+<p>Instead of returning the actual records, EGQuery provides the number of matching records in each database, which is useful for quickly assessing the scope of your query across different NCBI databases.</p>
+<p><strong>Example</strong></p>
+<p>[https://eutils.ncbi.nlm.nih.gov/entrez/eutils/egquery.fcgi?term=asthma](https://eutils.ncbi.nlm.nih.gov/entrez/eutils/egquery.fcgi?term=asthma</p>
+<hr />
+<h1 id="einfo">EInfo</h1>
+<p>To use EInfo:
+1.  Start with the base URL: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/einfo.fcgi? 
+2.  Add required parameters to the base URL
+* If more than one parameter, join with an ampersand (&amp;) 
+* Do not include spaces</p>
+<p>| --- | --- | --- |
+| EINfo <strong>Optional</strong>  Parameters  | Description | Example |
+| db | Database you want to search | db=pubmed |
+| version | version | Used to specify version 2.0 EInfo XML. The only supported value is ‘2.0’. |
+| retmode | format | Determines the format of the returned output. The default value is ‘xml’. Also ‘json’ is supported. |</p>
+<ol>
+<li>Paste the URL with parameters into any internet browser and press <strong>Enter</strong> key</li>
+</ol>
+<p><strong>Result</strong></p>
+<p>EInfo provides one of the following:
+* When a database parameter is given, statistics for a single database including lists of indexed fields and link names returns
+* When no database parameter is given, a list of the names of all valid databases returns</p>
+<p><strong>Examples</strong></p>
+<p><a href="https://eutils.ncbi.nlm.nih.gov/entrez/eutils/einfo.fcgi?db=protein">https://eutils.ncbi.nlm.nih.gov/entrez/eutils/einfo.fcgi?db=protein</a></p>
+<p><a href="https://eutils.ncbi.nlm.nih.gov/entrez/eutils/einfo.fcgi?db=protein&amp;version=2.0&amp;retmode=json">https://eutils.ncbi.nlm.nih.gov/entrez/eutils/einfo.fcgi?db=protein&amp;version=2.0&amp;retmode=json</a></p>
+<hr />
+<h2 id="espell">ESpell</h2>
+<p>To use ESpell:
+1.  Start with the base URL: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/espell.fcgi? 
+2.  Add required parameters to the base URL
+* If more than one parameter, join with an ampersand (&amp;) 
+* Do not include spaces. Spaces may be replaced by '+' signs</p>
+<p>| --- | --- | --- |
+| ESpell Required Parameters  | Description | Example |
+| db | Database you want to search | db=pubmed |
+| term  | Word or phrase you want to search for in the database. Spaces may be replaced by '+' signs. | term = asthma |</p>
+<ol>
+<li>Paste the URL with parameters into any internet browser and press <strong>Enter</strong> key</li>
+</ol>
+<p><strong>Result</strong></p>
+<p>Provides spelling suggestions for terms within a single text query  </p>
+<p><strong>Example</strong></p>
+<p><a href="https://eutils.ncbi.nlm.nih.gov/entrez/eutils/espell.fcgi?db=pubmed&amp;term=asthmaa+OR+alergies">https://eutils.ncbi.nlm.nih.gov/entrez/eutils/espell.fcgi?db=pubmed&amp;term=asthmaa+OR+alergies</a></p>
+<hr />
+<h1 id="ecitmatch">ECitMatch</h1>
+<p>To use ECitMatch:
+1.  Start with the base URL: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/ecitmatch.fcgi? 
+2.  Add required parameters to the base URL
+* If more than one parameter, join with an ampersand (&amp;) 
+* Do not include spaces</p>
+<p>| --- | --- | --- |
+| EINfo Required Parameters  | Description | Example |
+| db | Database you want to search | db=pubmed |
+| bdata | Citation strings | Each input citation must be represented by a citation string in the following format:<br>
+journal_title|year|volume|first_page|author_name|your_key|
+ |
+| retmode |  format | Determines the format of the returned output. The default value is ‘xml’. Also ‘json’ is supported. |</p>
+<ol>
+<li>Paste the URL with parameters into any internet browser and press <strong>Enter</strong> key</li>
+</ol>
+<p><strong>Result</strong></p>
+<p>ECitMatch 
+* Retrieves PubMed IDs (PMIDs) that correspond to a set of input citation strings. </p>
+<p><strong>Examples</strong></p>
+<p><a href="https://eutils.ncbi.nlm.nih.gov/entrez/eutils/einfo.fcgi?db=protein">https://eutils.ncbi.nlm.nih.gov/entrez/eutils/einfo.fcgi?db=protein</a></p>
+<p><a href="https://eutils.ncbi.nlm.nih.gov/entrez/eutils/einfo.fcgi?db=protein&amp;version=2.0&amp;retmode=json">https://eutils.ncbi.nlm.nih.gov/entrez/eutils/einfo.fcgi?db=protein&amp;version=2.0&amp;retmode=json</a></p>
+<hr />
+<h2 id="epost">EPost</h2>
+<p>To use EPost:
+1.  Start with the base URL: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/epost.fcgi? 
+2.  Add required parameters to the base URL
+* If more than one parameter, join with an ampersand (&amp;) 
+* Do not include spaces</p>
+<p>| --- | --- | --- |
+| ESummary Required Parameters  | Description | Example |
+| db | Database you want to search | db=pubmed |
+| id  | One UID or a set of UIDs separated with commas. All must be from same database  | id=40654110|</p>
+<ol>
+<li>Paste the URL with parameters into any internet browser and press <strong>Enter</strong> key</li>
+</ol>
+<p><strong>Result</strong></p>
+<p>Epost does the following: </p>
+<ul>
+<li>Uploads a list of UIDs to the History server </li>
+<li>Appends the list of UIDs to an existing set of UIDs attached to a Web Environment or creates a new Web Environment if one does not yet exist.</li>
+</ul>
+<p><strong>Examples</strong></p>
+<p>Post UIDs to History Server:</p>
+<p><a href="https://eutils.ncbi.nlm.nih.gov/entrez/eutils/epost.fcgi?db=pubmed&amp;id=11237011,12466850">https://eutils.ncbi.nlm.nih.gov/entrez/eutils/epost.fcgi?db=pubmed&amp;id=11237011,12466850</a></p>
+<p>Attach UIDs to Web Environment</p>
+<p><a href="epost.fcgi?db=protein&amp;id=15718680,157427902,119703751&amp;WebEnv={webenv string}">epost.fcgi?db=protein&amp;id=15718680,157427902,119703751&amp;WebEnv=1</a></p>
 
 
 
