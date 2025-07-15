@@ -99,7 +99,7 @@ To use EFetch:
 
 **Result**
 
-Returns formatted data records for the UIDs, in a format specified in the request, e.g., XML or FASTA.
+Returns full data records for the UIDs, in a format specified in the request, e.g., XML or FASTA.
 
 
 **Example**
