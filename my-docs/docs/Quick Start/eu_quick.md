@@ -7,7 +7,7 @@ title: E-Utilities Quick Start Guide
 E-Utilies Options:
 
 *  [ESearch](#esearch) - Searches one database
-*  [ESummary](#essumary) - Downloads summaries of database records
+*  [ESummary](#esumary) - Downloads summaries of database records
 *  [Efetch](#efetch)  - Returns full data records
 *  [Elink](#elink) - Returns data linked within the same database or between two databases
 *  [EGQuery](#egquery) - Returns the number of records in each database for a search term
@@ -38,7 +38,7 @@ To use Esearch:
 **Result**
 
 Returns a list of UIDs displayed in the internet browser. By default, the maximum number of results is limited to 20. 
-* To change the number of results or add in other optional parameters, see [ESearch](reference_guide/esearch.md) for more information.
+* To change the number of results or add in other optional parameters, see [ESearch](Reference Guide/esearch.md) for more information.
 
 **Example**
 
@@ -118,7 +118,7 @@ To use EFetch:
 **Result**
 
 Returns a list of UIDs displayed in the internet browser. By default, the maximum number of results is limited to 20. 
-* To change the number of results or add in other optional parameters, see [ESearch](reference_guide/esearch.md) for more information.
+* To change the number of results or add in other optional parameters, see [ESearch](Reference Guide/esearch.md) for more information.
 
 
 **Example**
@@ -147,7 +147,7 @@ To use EFetch:
 **Result**
 
 Returns a list of UIDs displayed in the internet browser. By default, the maximum number of results is limited to 20. 
-* To change the number of results or add in other optional parameters, see [ESearch](reference_guide/esearch.md) for more information.
+* To change the number of results or add in other optional parameters, see [ESearch](Reference Guide/esearch.md) for more information.
 
 
 **Example**
