@@ -38,7 +38,7 @@ To use Esearch:
 **Result**
 
 Returns a list of UIDs displayed in the internet browser. By default, the maximum number of results is limited to 20. 
-* To change the number of results or add in other optional parameters, see [ESearch](Reference Guide/esearch.md) for more information.
+* To change the number of results or add in other optional parameters, see [ESearch](docs/Reference Guide/esearch.md) for more information.
 
 **Example**
 
@@ -118,7 +118,7 @@ To use EFetch:
 **Result**
 
 Returns a list of UIDs displayed in the internet browser. By default, the maximum number of results is limited to 20. 
-* To change the number of results or add in other optional parameters, see [ESearch](Reference Guide/esearch.md) for more information.
+* To change the number of results or add in other optional parameters, see [ESearch](docs/Reference Guide/esearch.md) for more information.
 
 
 **Example**
@@ -147,7 +147,7 @@ To use EFetch:
 **Result**
 
 Returns a list of UIDs displayed in the internet browser. By default, the maximum number of results is limited to 20. 
-* To change the number of results or add in other optional parameters, see [ESearch](Reference Guide/esearch.md) for more information.
+* To change the number of results or add in other optional parameters, see [ESearch](docs/Reference Guide/esearch.md) for more information.
 
 
 **Example**
