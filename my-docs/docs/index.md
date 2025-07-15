@@ -14,7 +14,7 @@ Users can access E-utilities by writing API queries and pasting them into any in
 
 ## Quick Start
 
-Go to [Quick Start](eu_quick/eu_quick.md) guide.
+Go to [Quick Start](Quick Start/eu_quick.md) guide.
 
 ## Reference
 
