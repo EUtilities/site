@@ -388,6 +388,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="E-Utilties API URL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      Base URL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoints
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e-utilities-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      E-Utilities Parameters
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -485,6 +518,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="E-Utilties API URL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      Base URL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoints
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e-utilities-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      E-Utilities Parameters
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -505,15 +571,129 @@
 
 <h1 id="e-utilities-reference-guide">E-Utilities Reference Guide</h1>
 <h2 id="e-utilties-api-url">E-Utilties API URL</h2>
-<p>E-Utility API query URLs have three parts:</p>
+<p>EUtility API query URLs have three parts:</p>
 <ul>
 <li>Base URL</li>
-<li>E-Utility endpoint</li>
+<li>EUtility endpoint</li>
 <li>One or more parameters</li>
 </ul>
-<p>See Figure 1 below.</p>
 <p>Figure 1. Parts of the Entrez API Query</p>
 <p><img alt="Parts of the Entrez API Query" src="../apiurlparts.png" /></p>
+<h3 id="base-url">Base URL</h3>
+<p>All EUtility queries start with this base url: &nbsp; <strong>https://eutils.ncbi.nlm.nih.gov/entrez/eutils/</strong> .</p>
+<h3 id="endpoints">Endpoints</h3>
+<p>The EUtilities API offers nine EUtility endpoints. In Table 1, see the list of EUtility endpoints with a brief description. For more information about each EUtility endpoint, in Table 1 click the endpoint in the first column to go to a page with detailed information. </p>
+<p>Table 1: List of E-utilities in Order of Use</p>
+<table>
+<thead>
+<tr>
+<th><strong>EUtility&nbsp;Endpoint</strong></th>
+<th><strong>Brief Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ESearch</td>
+<td>Returns a list of UIDs from a single database containing the searched text</td>
+</tr>
+<tr>
+<td>ESummary</td>
+<td>Downloads document summaries for each UID</td>
+</tr>
+<tr>
+<td>EFetch</td>
+<td>Returns a full data record</td>
+</tr>
+<tr>
+<td>EGQuery</td>
+<td>Searches for text in NCBI databases and returns the number of results for each database</td>
+</tr>
+<tr>
+<td>ELink</td>
+<td>Returns a list of UIDs for records that are linked between two databases. <br> The UIDs returned by elink can be passed on directly to epost, esummary, or efetch.</td>
+</tr>
+<tr>
+<td>EInfo</td>
+<td>Retrieves information and statistics about a single database, including indexing fields and available link names. <br>If no database is provided, EInfo returns the list of current databases in the network.</td>
+</tr>
+<tr>
+<td>ESpell</td>
+<td>Returns spelling suggestions for a text query</td>
+</tr>
+<tr>
+<td>ECitMatch</td>
+<td>Searches PubMed for citations</td>
+</tr>
+<tr>
+<td>EPost</td>
+<td>Saves a list of UIDs to use with other E-utilities like ESummary or EFetch</td>
+</tr>
+</tbody>
+</table>
+<h2 id="e-utilities-parameters">E-Utilities Parameters</h2>
+<p>Parameters are options you add to the base URL and EUtility to refine the results. Each EUtility has required and optional parameters. Null values or inappropriate parameters are generally ignored.</p>
+<p>See Table 2 for a list of the most commonly used parameters. For a full list, see E-utilities Parameters for the required and optional parameter options for each EUtility.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>EUtilities that Use it</th>
+<th>What Does it Do?</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Database</td>
+<td>EInfo <br>ESearch<br> ESummary <br>EPost<br>ELink<br>ESpell<br>ECitMatch<br>EFetch</td>
+<td>Limits results to the provided database</td>
+<td>db=pubmed</td>
+</tr>
+<tr>
+<td>Term</td>
+<td>EGQuery <br> ESearch <br> ELink <br> ESpell</td>
+<td>Queries for the term you provide</td>
+<td>term=asthma</td>
+</tr>
+<tr>
+<td>UID</td>
+<td>ESummary <br> epost<br>elink<br>EFetch</td>
+<td>Limits results to the provided UIDs <br> For more than one UID, add a comma to separate<br> See UIDs for more information  ADD LINK HERE</td>
+<td>id=19393038,30242208,29453458</td>
+</tr>
+<tr>
+<td>usehistory</td>
+<td>esearch <br>  OTHERS</td>
+<td>Saves results to use with a subsequent EUtility query</td>
+<td>usehistory=y</td>
+</tr>
+<tr>
+<td>retmax</td>
+<td>esearch <br> esummary</td>
+<td>Total number of DocSums from the input set to be retrieved, up to a maximum of 10,000</td>
+<td>retmax=100</td>
+</tr>
+<tr>
+<td>retmode</td>
+<td>esummary <br>einfo<br>esearch<br>efetch<br>elink</td>
+<td>Formats of the output</td>
+<td>retmode=json <br>retmode=xml</td>
+</tr>
+<tr>
+<td>reldate</td>
+<td>esearch</td>
+<td>Sets the days to be searched relative to the current date, set reldate=1 for the most recent day</td>
+<td>reldate=1</td>
+</tr>
+<tr>
+<td>mindate <br> maxdate</td>
+<td>esearch <br> elink</td>
+<td>Specifies the date according to the format YYYY/MM/DD, YYYY, or YYYY/MM  <br> A query must contain both mindate and maxdate parameters</td>
+<td>mindate=2000/01<br> maxdate=2022/12</td>
+</tr>
+</tbody>
+</table>
+<p>REMOVE ALL SPACES FROM QUICK START</p>
 
 
 
