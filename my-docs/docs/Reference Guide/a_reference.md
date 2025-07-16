@@ -1,6 +1,6 @@
-# E-Utilities Reference Guide
+# EUtilities Reference Guide
 
-## E-Utilties API URL
+## EUtilties API URL
 
 EUtility API query URLs have three parts:
 
@@ -34,7 +34,7 @@ Table 1: List of E-utilities in Order of Use
 | ECitMatch | Searches PubMed for citations |
 | EPost | Saves a list of UIDs to use with other E-utilities like ESummary or EFetch |
 
-## E-Utilities Parameters
+## EUtilities Parameters
 
 Parameters are options you add to the base URL and EUtility to refine the results. Each EUtility has required and optional parameters. Null values or inappropriate parameters are generally ignored.
 
@@ -51,4 +51,3 @@ See Table 2 for a list of the most commonly used parameters. For a full list, se
 | reldate | esearch | Sets the days to be searched relative to the current date, set reldate=1 for the most recent day | reldate=1 |
 | mindate <br> maxdate |  esearch <br> elink | Specifies the date according to the format YYYY/MM/DD, YYYY, or YYYY/MM  <br> A query must contain both mindate and maxdate parameters| mindate=2000/01<br> maxdate=2022/12  | A query must contain both mindate and maxdate parameters | 
 
-REMOVE ALL SPACES FROM QUICK START
