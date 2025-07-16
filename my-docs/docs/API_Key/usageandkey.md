@@ -74,7 +74,7 @@ To use your API key as a parameter in an NCBI EUtility API query, add the api_ke
 
 ###  Minimize the Number of Requests
 
-If a query requires searching for and/or downloading a large number of records, use the [History parameter](Reference%20Guide/a_reference/#eutilities-parameters), which works in batches rather than using separate requests for each record.
+If a query requires searching for and/or downloading a large number of records, use the [History parameter](Reference_Guide/a_reference/#eutilities-parameters), which works in batches rather than using separate requests for each record.
 
 **CHECK THIS LINK WORKS AFTER DEPLOYING**
 
