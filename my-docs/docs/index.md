@@ -11,6 +11,9 @@ Here are a few examples of what E-Utilities can do for you:
 
 Users can access E-utilities by writing API queries and pasting them into any internet browser. 
 
+## API Usage Guidelines
+
+To avoide overloading EUtility servers, please see API Usage Guidelines and obtain your API Key.
 
 ## Quick Start
 
