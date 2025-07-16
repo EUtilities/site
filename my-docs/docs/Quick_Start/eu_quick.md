@@ -42,7 +42,7 @@ To use Esearch:
 
 Returns a list of UIDs displayed in the internet browser. By default, the maximum number of results is limited to 20. 
 
-* To change the number of results or add in other optional parameters, see [ FIX ME IM BROKEN  ESearch Reference Guide](~Reference Guide/esearch.md) for more information.
+* To change the number of results or add in other optional parameters, see [ FIX ME IM BROKEN  ESearch Reference Guide](/site/docs/Reference_Guide/esearch.md) for more information.
 
 **Example**
 
@@ -301,4 +301,4 @@ Post UIDs to History Server:
 
 Attach UIDs to Web Environment:
 
-[epost.fcgi?db=protein&id=15718680,157427902,119703751&WebEnv=1](epost.fcgi?db=protein&id=15718680,157427902,119703751&WebEnv={webenv string})
+[https://eutils.ncbi.nlm.nih.gov/entrez/eutils/epost.fcgi?db=protein&id=15718680,157427902,119703751&WebEnv=1](https://eutils.ncbi.nlm.nih.gov/entrez/eutils/epost.fcgi?db=protein&id=15718680,157427902,119703751&WebEnv={webenv string})
