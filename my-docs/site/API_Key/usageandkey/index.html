@@ -12,7 +12,7 @@
         <link rel="prev" href="../..">
       
       
-        <link rel="next" href="../../Quick_Start/eu_quick/">
+        <link rel="next" href="../API_Explorer/api_explorer/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -45,6 +45,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -388,6 +390,75 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    API Explorer
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            API Explorer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../API_Explorer/api_explorer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Api explorer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -724,7 +795,7 @@
 <p><code>{"error":"API rate limit exceeded","count":"11"}</code></p>
 <p>By including an API key, a site can post up to 10 requests per second by default. Higher rates are available by request at <a href="eutilities@ncbi.nlm.nih.gov">eutilities@ncbi.nlm.nih.gov</a>. </p>
 <h3 id="obtain-an-api-key">Obtain an API Key</h3>
-<p>Users can obtain an API key from the Settings page of their NCBI account. To create an account, visit <a href="http://www.ncbi.nlm.nih.gov/account/">http://www.ncbi.nlm.nih.gov/account/</a>. After creating the key, include it in each EUtility request by assigning it to the api_key parameter. For example:</p>
+<p>Users can obtain an API key from the Settings page of their NCBI account. To create an account, visit <a href="http://www.ncbi.nlm.nih.gov/account/">http://www.ncbi.nlm.nih.gov/account/</a>. After creating the key, include it in each EUtility API request by assigning it to the api_key parameter. For example:</p>
 <p><code>api_key={API key value}</code></p>
 <p>To get your API key, follow these steps:</p>
 <ol>
