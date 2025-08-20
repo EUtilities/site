@@ -51,7 +51,7 @@ By including an API key, a site can post up to 10 requests per second by default
 
 ### Obtain an API Key
 
-Users can obtain an API key from the Settings page of their NCBI account. To create an account, visit [http://www.ncbi.nlm.nih.gov/account/](http://www.ncbi.nlm.nih.gov/account/). After creating the key, include it in each EUtility request by assigning it to the api_key parameter. For example:
+Users can obtain an API key from the Settings page of their NCBI account. To create an account, visit [http://www.ncbi.nlm.nih.gov/account/](http://www.ncbi.nlm.nih.gov/account/). After creating the key, include it in each EUtility API request by assigning it to the api_key parameter. For example:
 
 `api_key={API key value}`
 

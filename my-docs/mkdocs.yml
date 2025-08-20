@@ -7,4 +7,5 @@ theme:
     - navigation.instant
     - search.highlight
     - content.tabs.link
-
+extra_css:
+          - stylesheets/extra.css
