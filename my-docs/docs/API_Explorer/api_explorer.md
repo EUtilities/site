@@ -1,1 +1,1 @@
-Launch the [API Explorer](swagger-ui/index.html), an interactive tool for testing.
+Launch the [API Explorer](https://eutilities.github.io/site/swagger-ui/), an interactive tool for testing.

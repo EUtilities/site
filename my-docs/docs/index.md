@@ -23,7 +23,9 @@ You can access the EUtilities by writing API queries and pasting them into any i
 * The PubMed User Guide provides guidance for popular EUtility uses
 
 
+## EUtilities Mailing List
 
+To get announcements of software updates, known bugs, and other policy changes affecting the EUtilities, request to be added to the EUtility mailing list at [eutilities@ncbi.nlm.nih.gov](eutilities@ncbi.nlm.nih.gov).
 
 ---
 

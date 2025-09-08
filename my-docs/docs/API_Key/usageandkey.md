@@ -5,6 +5,7 @@
 To avoid overloading the EUtility servers, NCBI recommends the following:
 
 * Post no more than three URL requests per second
+    *  For larger requests, see [API Key](#api-key) below. 
 * Limit large jobs to either weekends or between 9:00 PM and 5:00 AM Eastern time during weekdays
 
 Failure to comply with this policy may result in an IP address being blocked from accessing NCBI. 
@@ -16,28 +17,32 @@ If NCBI blocks an IP address, you must:
 
 ---
 
+### Restoring Blocked Access
+
+If NCBI blocks an IP address for overloading the EUtility servers:
+
+*  Restore access by registering a contact name, email address, and software name with NCBI
+*  Include this information in all subsequent EUtility requests from that software package 
+
+
 ### Register Your Tool and Email
 
-The values for tool and email must be registered with NCBI. 
+The name of the software and email must be registered with NCBI. 
 
-* Providing values for tool and email in requests is not sufficient to comply with this policy. 
-* Requests from any IP that lack registered values for tool and email and that violate the above usage policies may be blocked. 
-* Software developers may register values of tool and email at any time and are encouraged to do so.
+To register, e-mail [eutilities@ncbi.nlm.nih.gov](eutilities@ncbi.nlm.nih.gov) including the following information: 
 
-To register your tool and email, e-mail [eutilities@ncbi.nlm.nih.gov](eutilities@ncbi.nlm.nih.gov). Include the following information: 
+*  The name of either a developer or the organization creating the software
+*  The name of the software, which should be a string with no internal spaces that uniquely identifies the software producing the request
+    * For example:   Microsoft-Office
+* The email address:
+    * The email address of the software developer and not that of a third-party end user. 
 
-* Name of either a developer or the organization creating the software
-* The tool Information should be a string with no internal spaces that uniquely identifies the software producing the request. 
-* The email should be a complete and valid e-mail address of the software developer and not that of a third-party end user
-     - The email will be used only to contact developers if NCBI observes requests that violate our policies. We will attempt to contact prior to blocking access. 
+Once NCBI establishes communication with the developer, receives the software name and email address, and validates the e-mail address, the block will be lifted. 
 
-Once NCBI establishes communication with a developer, receives values for tool and email, and validates the e-mail address in email, the block will be lifted. 
-
+The information must be registered with NCBI - providing it in requests is not sufficient to comply with this policy.
 
 
-**EUtilities Mailing List**
 
-To get announcements of software updates, known bugs, and other policy changes affecting the EUtilities, request to be added to the EUtility mailing list at [eutilities@ncbi.nlm.nih.gov](eutilities@ncbi.nlm.nih.gov).
 
 ## API Key
 
