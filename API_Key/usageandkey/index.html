@@ -394,6 +394,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#restoring-blocked-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restoring Blocked Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#register-your-tool-and-email" class="md-nav__link">
     <span class="md-ellipsis">
       Register Your Tool and Email
@@ -684,6 +693,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#restoring-blocked-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restoring Blocked Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#register-your-tool-and-email" class="md-nav__link">
     <span class="md-ellipsis">
       Register Your Tool and Email
@@ -759,7 +777,10 @@
 <h2 id="usage-guidelines">Usage Guidelines</h2>
 <p>To avoid overloading the EUtility servers, NCBI recommends the following:</p>
 <ul>
-<li>Post no more than three URL requests per second</li>
+<li>Post no more than three URL requests per second<ul>
+<li>For larger requests, see <a href="#api-key">API Key</a> below. </li>
+</ul>
+</li>
 <li>Limit large jobs to either weekends or between 9:00 PM and 5:00 AM Eastern time during weekdays</li>
 </ul>
 <p>Failure to comply with this policy may result in an IP address being blocked from accessing NCBI. </p>
@@ -769,25 +790,28 @@
 <li>Include this information in all subsequent EUtility requests from that software package</li>
 </ul>
 <hr />
-<h3 id="register-your-tool-and-email">Register Your Tool and Email</h3>
-<p>The values for tool and email must be registered with NCBI. </p>
+<h3 id="restoring-blocked-access">Restoring Blocked Access</h3>
+<p>If NCBI blocks an IP address for overloading the EUtility servers:</p>
 <ul>
-<li>Providing values for tool and email in requests is not sufficient to comply with this policy. </li>
-<li>Requests from any IP that lack registered values for tool and email and that violate the above usage policies may be blocked. </li>
-<li>Software developers may register values of tool and email at any time and are encouraged to do so.</li>
+<li>Restore access by registering a contact name, email address, and software name with NCBI</li>
+<li>Include this information in all subsequent EUtility requests from that software package </li>
 </ul>
-<p>To register your tool and email, e-mail <a href="eutilities@ncbi.nlm.nih.gov">eutilities@ncbi.nlm.nih.gov</a>. Include the following information: </p>
+<h3 id="register-your-tool-and-email">Register Your Tool and Email</h3>
+<p>The name of the software and email must be registered with NCBI. </p>
+<p>To register, e-mail <a href="eutilities@ncbi.nlm.nih.gov">eutilities@ncbi.nlm.nih.gov</a> including the following information: </p>
 <ul>
-<li>Name of either a developer or the organization creating the software</li>
-<li>The tool Information should be a string with no internal spaces that uniquely identifies the software producing the request. </li>
-<li>The email should be a complete and valid e-mail address of the software developer and not that of a third-party end user<ul>
-<li>The email will be used only to contact developers if NCBI observes requests that violate our policies. We will attempt to contact prior to blocking access. </li>
+<li>The name of either a developer or the organization creating the software</li>
+<li>The name of the software, which should be a string with no internal spaces that uniquely identifies the software producing the request<ul>
+<li>For example:   Microsoft-Office</li>
+</ul>
+</li>
+<li>The email address:<ul>
+<li>The email address of the software developer and not that of a third-party end user. </li>
 </ul>
 </li>
 </ul>
-<p>Once NCBI establishes communication with a developer, receives values for tool and email, and validates the e-mail address in email, the block will be lifted. </p>
-<p><strong>EUtilities Mailing List</strong></p>
-<p>To get announcements of software updates, known bugs, and other policy changes affecting the EUtilities, request to be added to the EUtility mailing list at <a href="eutilities@ncbi.nlm.nih.gov">eutilities@ncbi.nlm.nih.gov</a>.</p>
+<p>Once NCBI establishes communication with the developer, receives the software name and email address, and validates the e-mail address, the block will be lifted. </p>
+<p>The information must be registered with NCBI - providing it in requests is not sufficient to comply with this policy.</p>
 <h2 id="api-key">API Key</h2>
 <p>An API key is only needed if you expect to access EUtilities at a rate of more than three requests per second. Without an API key, IP address posting more than 3 requests per second to the EUtilities will receive an error message. </p>
 <p><strong>Example Error Message if Rates are Exceeded</strong></p>
